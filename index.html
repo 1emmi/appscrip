@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Discover Our Products</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: #fff;
+            color: #222;
+            line-height: 1.5;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #ccc;
+        }
+
+        header nav a {
+            margin-left: 1.5rem;
+            text-decoration: none;
+            color: #000;
+            font-weight: 500;
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        .main {
+            display: flex;
+            gap: 2rem;
+            flex-direction: row;
+        }
+
+        .filters {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .filters h3 {
+            margin-bottom: 1rem;
+        }
+
+        .filters ul {
+            list-style: none;
+        }
+
+        .filters li {
+            margin-bottom: 0.5rem;
+        }
+
+        .filter-toggle {
+            display: none;
+            margin-bottom: 1rem;
+        }
+
+        .product-grid {
+            flex: 3;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .product-card {
+            border: 1px solid #eee;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 0.5rem;
+            border-radius: 6px;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .main {
+                flex-direction: column;
+            }
+
+            .filters {
+                display: none;
+                margin-bottom: 1rem;
+                background: #f9f9f9;
+                padding: 1rem;
+                border-radius: 8px;
+            }
+
+            .filters.active {
+                display: block;
+            }
+
+            .filter-toggle {
+                display: block;
+                background: #000;
+                color: #fff;
+                padding: 0.5rem 1rem;
+                border: none;
+                cursor: pointer;
+                border-radius: 5px;
+                margin-bottom: 1rem;
+            }
+        }
+
+        footer {
+    background: #000;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 0.5rem;
+    font-size: 1.25rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ccc;
+}
+
+@media (min-width: 600px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+
+<body>
+    <header>
+        <div class="logo"><img src="logo.jpg" alt="" height="50px " width="50px"></div>         
+        <nav>
+            <a href="shop.html">Shop</a>
+            <a href="sales.html">Sale</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1 class="title">DISCOVER OUR PRODUCTS</h1>
+        <p class="description">Discover our exclusive, high-quality products crafted for modern lifestyles – stylish,
+            durable, and designed to elevate your everyday essentials.
+            .</p>
+
+        <button class="filter-toggle" onclick="toggleFilter()">Toggle Filters</button>
+
+        <div class="main">
+            <aside class="filters" id="filterPanel">
+                <h3>Filter</h3>
+                <ul>
+                    <li><input type="checkbox" /> Bags</li>
+                    <li><input type="checkbox" /> Shoes</li>
+                    <li><input type="checkbox" /> Accessories</li>
+                    <li><input type="checkbox" /> Clothes</li>
+                </ul>
+            </aside>
+
+            <section class="product-grid">
+                <!-- Sample product cards -->
+                <div class="product-card">
+                    <img src="th.jpg" alt="backpack image" />
+                    <h4>Backpack</h4>
+                </div>
+                <div class="product-card">
+                    <img src="gabby-gabby-doll-toy.jpg" alt="Doll toy" />
+                    <h4>Doll Toy</h4>
+                </div>
+                <div class="product-card">
+                    <img src="belt.jpg" alt="leather belt " />
+                    <h4>Leather Belt</h4>
+                </div>
+                <div class="product-card">
+                    <img src="shoes.jpg" alt="White shoes " />
+                    <h4>White Sneakers</h4>
+                </div>
+                <div class="product-card">
+                    <img src="brown-custom-canvas-tote-bag.jpg" alt="Canvas tote " />
+                    <h4>Canvas Tote</h4>
+                </div>
+                <div class="product-card">
+                    <img src="striped bag.jpg" alt="striped bag " />
+                    <h4>Striped Bag</h4>
+                </div>
+                <div class="product-card">
+                    <img src="denim bagg.jpg" alt="denim Clutch" />
+                    <h4>Denim Clutch</h4>
+                </div>
+                <div class="product-card">
+                    <img src="yellow.jpg" alt="yellow plush  " />
+                    <h4>Yellow Plush</h4>
+                </div>
+            
+            </section>
+        </div>
+    </div>
+<footer>
+  <div class="footer-wrapper">
+    <div class="footer-section about">
+      <h2>Sooraj S Emmi</h2>
+      <p>&copy; 2025 MADE BY SOORAJ S EMMI. All rights reserved.</p>
+      <p>Designing with passion for performance, elegance, and usability.</p>
+    </div>
+
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:soorajsemmi@gmail.com">soorajsemmi@gmail.com</a></p>
+      <p>Phone: +91 7204046712</p>
+    </div>
+
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li ><a href="index.html">Home</a></li>
+        <li ><a href="shop.html">Shop</a></li>
+        <li ><a href="blog.html">Blog</a></li>
+        <li ><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section social">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    
+    <script>
+        function toggleFilter() {
+            const panel = document.getElementById('filterPanel');
+            panel.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
